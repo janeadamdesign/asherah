@@ -1,0 +1,67 @@
+{
+  "name": "asherah",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@react-spring/parallax": "^9.7.3",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.95",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "email-js": "^2.0.3",
+    "emailjs": "^4.0.3",
+    "framer-motion": "^11.1.7",
+    "lodash": "^4.17.21",
+    "lodash.throttle": "^4.1.1",
+    "react": "^18.3.1",
+    "react-calendar": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-phone-input-2": "^2.15.1",
+    "react-router-dom": "^6.23.0",
+    "react-scripts": "^5.0.1",
+    "tslib": "^2.6.2",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.17.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.5.0",
+    "@types/lodash": "^4.17.0",
+    "@types/lodash.throttle": "^4.1.9",
+    "eslint": "^8.57.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "^7.34.3",
+    "globals": "^15.6.0",
+    "typescript-eslint": "^7.13.1"
+  }
+}

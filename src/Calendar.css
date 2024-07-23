@@ -1,0 +1,406 @@
+/* Necessary to remove the stupid dotted lines that appear in chrome. Not sure where this was originally coming from */
+abbr[title] {
+  text-decoration: none !important;
+}
+
+/* not sure what this does */
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sets box sizing for all elements */
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Sets attributes for calendar as a whole*/
+.react-calendar {
+  position: static;
+  background-color: rgba(35, 35, 30, 0.99);
+  color: rgb(232, 232, 225);
+  font-family: "Kinta", serif;
+  font-weight: normal;
+  line-height: 1.125rem;
+  /* margin: 0 0.2rem 0.2rem 0; */
+  border-radius: 0.5rem;
+}
+
+/* Sets padding around the elements that display weekdays. Addresses individual weekday element */
+.react-calendar__month-view__weekdays__weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+/* General properties for the bar that shows all weekdays */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Kinta", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 0.3rem;
+}
+
+/* Addresses all buttons */
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+  color: rgb(232, 232, 225);
+  border: 0.025rem rgba(255, 235, 119, 0.5) solid;
+}
+
+/* whole top bar */
+.react-calendar__navigation {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.react-calendar__navigation > * {
+  padding: 1rem;
+}
+
+/* Addresses inactive buttons */
+.react-calendar__navigation button:disabled {
+  background-color: rgba(35, 35, 30, 0.99);
+  color: rgba(35, 35, 30, 0.99);
+}
+
+/* affects buttons within top bar*/
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  font-family: "Kinta", serif;
+  font-weight: bold;
+  font-size: 1.35rem;
+}
+
+/* Addresses weekend cells */
+.react-calendar__month-view__days__day--weekend {
+  color: rgb(255, 215, 113) !important;
+}
+
+/* Addresses cells that aren't currently selected as per month in bar*/
+.react-calendar__month-view__days__day--neighboringMonth,
+.react-calendar__decade-view__years__year--neighboringDecade,
+.react-calendar__century-view__decades__decade--neighboringCentury {
+  color: #757575 !important;
+}
+
+/* I think addresses the buttons once you go into year/decade/century view. Seems fine so leave as is*/
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 1.5rem 1.5rem;
+}
+
+/* Addresses numbered days inside month view, months inside year view, years inside decade view, decades inside century view etc */
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 1rem 1rem;
+  background: inherit;
+  text-align: center;
+  line-height: 1rem;
+  font-family: "Kinta", serif;
+  font-size: 1.5rem;
+}
+
+/* Addresses text colour in diabled / neighbouring etc */
+.react-calendar__tile:disabled {
+  color: rgba(35, 35, 30, 0.99) !important;
+}
+.react-calendar__month-view__days__day--neighboringMonth:disabled,
+.react-calendar__decade-view__years__year--neighboringDecade:disabled,
+.react-calendar__century-view__decades__decade--neighboringCentury:disabled {
+  color: #cdcdcd !important;
+}
+
+/* Hover / Focus behaviour */
+/* Addresses all buttons on hover */
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+  background: rgba(254, 169, 255, 0.6);
+  font-weight: bold;
+  color: rgb(232, 232, 225) !important;
+}
+
+/* Addresses tiles concerned with current time / date */
+.react-calendar__tile--now {
+  background: rgb(184, 225, 96);
+  color: black !important;
+  font-weight: bold !important;
+}
+
+/* Addresses the tile/button clicked upon. Not sure difference between --hasActive & --active*/
+.react-calendar__tile--hasActive {
+  background-color: rgba(255, 235, 119, 1);
+  color: black !important;
+  font-weight: bold !important;
+}
+.react-calendar__tile--active {
+  background-color: rgba(255, 235, 119, 1);
+  color: black !important;
+  font-weight: bold !important;
+}
+
+/* Styling for wrapping div inside Reservations.tsx */
+
+#reservation-container {
+  min-height: 100vh;
+  padding-top: 12rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: rgba(224, 224, 219, 1);
+}
+
+#modular-reservations-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  position: relative;
+  min-width: 25vw;
+  width: 40rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+
+#modular-reservations-container,
+#modular-reservations-container * {
+  transition: opacity 0.5s ease-in-out, max-width 0.5s ease-in-out,
+    max-height 0.5s ease-in-out, padding 0.5s ease-in-out,
+    margin 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out,
+    background 0.005s ease-in-out, color 0.005s ease-in-out,
+    font-weight 0.005s ease-in-out;
+}
+
+@media (min-width: 600px) {
+  .calendar-container {
+    max-width: 75%;
+    width: 40rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-container{ 
+    max-width: 100%;
+  }
+}
+
+.time-container {
+  max-width: auto;
+}
+
+.time-container .react-calendar,
+.calendar-container #time-selection,
+.time-container .react-calendar *,
+.calendar-container #time-selection * {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0 transparent;
+  font-size: 0;
+}
+
+.time-container .react-calendar *,
+.calendar-container #time-selection * {
+  opacity: 0 !important;
+}
+
+#time-selection,
+#time-selection * {
+  box-sizing: border-box;
+}
+
+#time-selection {
+  position: static;
+  background-color: rgba(35, 35, 30, 0.99);
+  color: rgb(232, 232, 225);
+  font-family: "Kinta", serif;
+  font-weight: normal;
+  /*margin: 0 0.2rem 0.2rem 0;*/
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+#monday {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 35, 30, 0.99);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button,
+.bottom-button {
+  margin: 0;
+  border: 0;
+  outline: none;
+  color: rgb(232, 232, 225);
+  background-color: rgba(35, 35, 30, 0.99);
+  border: 0.025rem rgba(255, 235, 119, 0.5) solid;
+  font-family: "Kinta", serif;
+  font-weight: bold;
+  font-size: 1.35rem;
+  padding: 1.35rem;
+  width: 100%;
+}
+
+.back-button:hover {
+  cursor: pointer;
+  background-color: rgba(254, 169, 255, 0.5);
+}
+
+#reservation-container p,
+#email-sms p {
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  transform: scale(1) !important;
+}
+
+.chunk {
+  box-sizing: border-box !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.meal-time {
+  margin: 0;
+  border: 0;
+  color: rgb(232, 232, 225);
+  background-color: rgba(35, 35, 30, 0.99);
+  border: 0.025rem rgba(255, 235, 119, 0.5) solid;
+  font-family: "Kinta", serif;
+  font-weight: bold;
+  font-size: 1.35rem;
+  padding: 1rem;
+  opacity: 1;
+}
+
+.meal-time-hide {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  background-color: rgb(255, 235, 119);
+}
+
+.meal-time:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+  background: rgba(254, 169, 255, 0.5);
+}
+
+#not-monday * {
+  width: 100%;
+}
+
+#email-sms,
+#final-confirmation {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-container {
+  overflow: hidden;
+  border-radius: 0.5rem !important;
+  box-sizing: border-box !important;
+  font-family: "Kinta", serif !important;
+  font-weight: normal !important;
+  border-radius: 0.5rem !important;
+  min-width: 50vw !important;
+  min-height: 50vh !important;
+  border-radius: 0.5rem !important;
+  position: relative !important;
+}
+
+.confirmation-fields {
+  position: static;
+  background-color: rgba(35, 35, 30, 0.99);
+  color: rgb(232, 232, 225);
+  font-family: "Kinta", serif;
+  font-weight: normal;
+  /* margin: 0 0.2rem 0.2rem 0 !important */
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#reservation-container p,
+#email-sms p,
+#reservation p {
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  transform: scale(1) !important;
+}
+
+#email-sms p > span {
+  font-weight: bold;
+}
+
+#booking-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-input-field {
+  background-color: rgba(224, 224, 219, 1);
+  min-height: 1.5rem;
+  font-size: 1.5rem;
+  color: rgba(35, 35, 30, 1);
+  font-family: "Playfair Display", sans-serif !important;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#phone {
+  margin-bottom: 1rem;
+}
+
+.bottom-button {
+  margin-top: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.bottom-button:hover {
+  background: rgb(184, 225, 96);
+  color: black !important;
+  font-weight: bold !important;
+  cursor: pointer;
+}
+
+.bottom-button,
+.bottom-button:hover {
+  transition: background-color 0.5s ease-in-out, font-size 0.5s ease-in-out,
+    padding 0.5s ease-in-out;
+}
