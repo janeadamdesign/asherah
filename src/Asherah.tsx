@@ -54,7 +54,12 @@ function Asherah(props: AsherahProps): React.ReactElement {
         className={props.headerColour}
         style={{ display: props.page === "history" ? "none" : "flex" }}
       >
-        <img id="logo" src="/asherahlogo.png" alt="logo"></img>
+        <img
+          id="logo"
+          src="/asherahlogo.png"
+          alt="logo"
+          onClick={props.handleClick}
+        />
         <nav id="main-nav">
           <a id="home" className="navlink" onClick={props.handleClick}>
             Home
@@ -228,7 +233,7 @@ function Asherah(props: AsherahProps): React.ReactElement {
                 <span className="parallax-span">
                   <div className="copy-img-container">
                     <img
-                    alt="tree"
+                      alt="tree"
                       id="tree"
                       src="/tree.jpeg"
                       className="copy-img"
@@ -297,7 +302,7 @@ function Asherah(props: AsherahProps): React.ReactElement {
               style={{ display: props.page === "history" ? "flex" : "none" }}
             >
               <img
-              alt="logo"
+                alt="logo"
                 id="logo"
                 src="/asherahlogo.png"
                 onClick={props.handleClick}
