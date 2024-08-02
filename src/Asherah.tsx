@@ -187,15 +187,15 @@ function Asherah(props: AsherahProps): React.ReactElement {
               <ParallaxLayer className="width-limit" offset={0.1} speed={0.4}>
                 <span className="parallax-span">
                   <p className="copy">
-                    Bordering the Lebanon Mountains, and situated at the
-                    crossroads of many of the world’s greatest civilisations,
-                    Malqaria is a jewel flanked on its east by the Aramean
-                    desert and the European Mediterranean to its west. This
-                    unique nation is distinguished by its enduring religious
-                    identity, having resisted assimilation into the spread of
-                    Christian and Islamic traditions for millennia, thus setting
-                    itself apart from many of its neighbours. Malqaria’s history
-                    is punctuated by a brief period as a Crusader kingdom
+                    Bordering the Lebanon Mountains, situated at the crossroads
+                    of many of the world’s greatest civilisations, Malqaria is a
+                    jewel flanked on its east by the Aramean desert and the
+                    European Mediterranean to its west. This unique nation is
+                    distinguished by its enduring religious identity, having
+                    resisted assimilation into the spread of Christian and
+                    Islamic traditions for millennia, thus setting itself apart
+                    from many of its neighbours. Malqaria’s history is
+                    punctuated by a brief period as a Crusader kingdom
                     established by errant French knights which, while leaving
                     indelible marks on the Malqarian architectural landscape,
                     nonetheless failed to thrust its population into the
@@ -205,27 +205,25 @@ function Asherah(props: AsherahProps): React.ReactElement {
                     Their spoken language is Old Malqarian, comprised of an
                     Aramaic substrate complemented by significant lexical
                     content from medieval Romance languages and Classical
-                    Arabic—unsurprising given its geographic position as a
-                    cosmopolitan trade hub.
+                    Arabic.
                   </p>
                   <p className="copy">
-                    Hammon Ba’albek, a AAA Five Diamond chef hailing from the
-                    Malqarian capital, imbues the ancient flavours and
-                    traditions of his homeland in every meal he crafts. Raised
-                    in the heart of the bustling streets of New Ugarit, Hammon’s
-                    passion for food was kindled at an early age, nurtured as he
-                    was by the rich tapestry of culinary heritage woven into the
-                    fabric of his and his family’s culture. From the fragrant
-                    spices mines of the Eastern Quarter to the bustling harbours
-                    of the historic port, the latter teeming with fresh catches
-                    from the Mediterranean Sea and seafood recipes from the
-                    city’s deeply-rooted Cypriot community, every aspect of New
-                    Ugarit’s culinary scene infused Hammon’s senses with
-                    inspiration. His signature dishes draw gourmets and food
-                    connoisseurs from across the globe, eager to experience his
-                    unique gastronomic alchemy. His work is not mere matter but
-                    narrative, each plate a chapter detailing the warp and weft
-                    of Malqarian life.
+                    Hammon Ba’albek, AAA Five Diamond chef from the Malqarian
+                    capital, imbues the ancient flavours and traditions of his
+                    homeland in every meal he crafts. Raised in the heart of the
+                    bustling streets of New Ugarit, Hammon’s passion for food
+                    was kindled at an early age, nurtured as he was by the rich
+                    tapestry of heritage woven into his and his family’s
+                    culture. From the fragrant spice mines of the Eastern
+                    Quarter to the bustling harbours of the historic port, every
+                    aspect of New Ugarit’s culinary scene infused Hammon’s
+                    senses with inspiration, teeming with fresh catches from the
+                    Mediterranean Sea and seafood recipes from the city’s
+                    deeply-rooted Cypriot community. His signature dishes draw
+                    gourmets and food connoisseurs from across the globe, eager
+                    to experience his unique gastronomic alchemy. His work is
+                    not mere matter but narrative, each plate a chapter
+                    detailing the warp and weft of Malqarian life.
                   </p>
                 </span>
               </ParallaxLayer>
@@ -257,40 +255,39 @@ function Asherah(props: AsherahProps): React.ReactElement {
                     Having resisted both American and Soviet influence during
                     the Cold War years, Malqaria retains its political status of
                     neutrality at the centre of a region embroiled in both the
-                    Arab-Israeli conflict and the Syrian civil war. This
+                    Arab-Israeli conflict and the Syrian civil war. Such
                     commitment to non-alignment allows Malqaria to serve as a
-                    mediator and a safe haven, fostering dialogue and
-                    understanding amongst its neighbours. The streets of New
-                    Ugarit buzz with a blend of Levantine scents and Italian
-                    chic, wherein marketplaces selling centuries-old spice
-                    blends sit alongside cafés playing contemporary music. Along
-                    the rugged coastlines, small fishing communities act out
-                    their daily routines, largely unchanged for hundreds of
-                    years, while inland, regular annual festivals celebrate the
-                    harvest, rain and sun with rites that honour the ancient
-                    Canaanite pantheon and the red earth in which they dwell.
-                    The deep integration of past and present in Malqarian
-                    society showcases a culture that is both resilient and
-                    welcoming, inviting visitors to experience its rich history
-                    and vibrant quotidian life.
+                    mediator, fostering dialogue and understanding amongst its
+                    neighbours. The streets of New Ugarit buzz with a blend of
+                    Levantine scents and Italian chic, wherein marketplaces
+                    selling centuries-old spice blends sit alongside cafés
+                    playing contemporary music. Along the rugged coastlines,
+                    small fishing communities act out their daily routines,
+                    largely unchanged for hundreds of years, while inland,
+                    regular festivals celebrate the harvest, rain and sun with
+                    rites that honour the ancient Canaanite pantheon and the red
+                    earth in which they dwell. The deep integration of past and
+                    present in Malqarian society showcases a culture that is
+                    both resilient and welcoming, inviting visitors to
+                    experience its rich history and vibrant quotidian life.
                   </p>
                   <p className="copy">
                     In the early 2000s, following a personal invitation from
-                    then First Lady Cherie Blair at the height of the ‘Cool
-                    Britannia’ era, Hammon embarked on a [gastronomic] odyssey
-                    to England, driven by an Epicurean passion to share the
-                    flavours of Malqaria with the world. Armed with perfected
-                    recipes passed down since time immemorial, Hammon opened the
-                    doors to Asherah, a restaurant that quickly became a beacon
-                    of Levantine cuisine in the heart of London’s Green Lanes.
-                    Named after Malqaria’s national tree—as well as the revered
-                    goddess of fertility to whom it remains dedicated—Asherah
-                    transports diners on a journey through the flavours of the
-                    Canaan of antiquity, blending traditional techniques with
-                    modern innovation to create a dining experience unlike any
-                    other. With each dish meticulously crated to honour the
-                    land, sea, sky and gods, Hammon invites guests to savour the
-                    essence of his homeland with every bite.
+                    then First Lady Cherie Blair, Hammon embarked on an odyssey
+                    to England at the height of the ‘Cool Britannia’ era, driven
+                    by an Epicurean passion to share the flavours of Malqaria
+                    with the world. Armed with recipes perfected since time
+                    immemorial, Hammon opened the doors to Asherah, a restaurant
+                    which quickly became a beacon of Levantine cuisine in the
+                    heart of London’s Green Lanes. Named after Malqaria’s
+                    national tree—as well as the revered goddess of fertility to
+                    whom it remains dedicated—Asherah transports diners on a
+                    journey through the flavours of the Canaan of antiquity,
+                    blending traditional techniques with modern innovation to
+                    create a dining experience unlike any other. With each dish
+                    meticulously crafted to honour the land, sea, sky and gods,
+                    Hammon invites guests to savour the essence of his homeland
+                    with every bite.
                   </p>
                 </span>
               </ParallaxLayer>

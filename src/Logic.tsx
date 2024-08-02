@@ -32,7 +32,7 @@ function Logic(): React.ReactElement {
       case "logo":
       case "home":
         window.scrollTo(0, 0);
-        setPage("home");
+        setPage("homfe");
         break;
       case "history":
         window.scrollTo(0, 0);
@@ -497,7 +497,7 @@ function Logic(): React.ReactElement {
   // Code for conditional rendering of mobile version
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const checkViewport = (): void => {
-    setIsMobile(window.innerWidth < 600);
+    setIsMobile(window.innerWidth < 850);
   };
   useEffect(() => {
     checkViewport();

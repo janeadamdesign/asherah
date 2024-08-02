@@ -171,6 +171,8 @@ header {
   width: 100%;
   height: 100vh;
   max-height: 100vh;
+   height: 100dvh;
+  max-height: 100dvh; 
 }
 
 #spice1 {
@@ -381,6 +383,7 @@ h3 {
 
 .menu-container {
   min-height: 100vh;
+  min-height: 100dvh;
   padding-top: 12rem;
   box-sizing: border-box;
   padding-right: 2rem;
@@ -505,6 +508,7 @@ h3 {
 #gallery-container-container {
   padding: 11rem 2rem 2rem 2rem;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   box-sizing: border-box;
   display: flex;
