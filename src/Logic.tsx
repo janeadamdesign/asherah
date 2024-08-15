@@ -32,7 +32,7 @@ function Logic(): React.ReactElement {
       case "logo":
       case "home":
         window.scrollTo(0, 0);
-        setPage("homfe");
+        setPage("home");
         break;
       case "history":
         window.scrollTo(0, 0);
