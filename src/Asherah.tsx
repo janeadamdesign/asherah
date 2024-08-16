@@ -1,6 +1,6 @@
 // Package imports
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import React from "react";
+import React, {useEffect} from "react";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/styles.css";
@@ -143,7 +143,7 @@ function Asherah(props: AsherahProps): React.ReactElement {
             ref={props.setAppetiserRef(reference)}
           >
             <h3>
-              {menuEntry.title} <span>{menuEntry.price} </span>
+              {menuEntry.title} <span>£{menuEntry.price} </span>
             </h3>{" "}
             <p className="break">&nbsp;</p>
             <p>{menuEntry.copy}</p>
@@ -152,6 +152,25 @@ function Asherah(props: AsherahProps): React.ReactElement {
       }
     );
   };
+
+  // scroll to top on refresh
+  useEffect((): (() => void) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    const scrollUpTimer: NodeJS.Timeout | number = setTimeout((): void => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, 100);
+    return (): void => {
+      clearTimeout(scrollUpTimer);
+    };
+  }, []);
 
   return (
     <div id="app">

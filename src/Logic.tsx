@@ -1,8 +1,11 @@
-import Asherah from "./Asherah";
-import AsherahMobile from "./AsherahMobile";
+// Package imports
+import throttle from "lodash.throttle";
 import React, { useEffect, useState, useRef } from "react";
 import { IParallax } from "@react-spring/parallax";
-import throttle from "lodash.throttle";
+
+// Local imports
+import Asherah from "./Asherah";
+import AsherahMobile from "./AsherahMobile";
 
 function Logic(): React.ReactElement {
   // All useEffect hooks are grouped towards end of document rather than immediately below their respective logics
@@ -454,7 +457,6 @@ function Logic(): React.ReactElement {
 1. scrollPositionY dependency: logs scroll position, runs opacityCalculator state setter fn, runs headerColourFunction state setter
 2. page dependency: runs headerColourFunctio state setter, add and remove event listener for user input 'scroll'; cleanup on unmount  */
 
-
   useEffect(() => {
     headerColourFunction();
     window.addEventListener("scroll", handleScrollY);
@@ -494,51 +496,70 @@ function Logic(): React.ReactElement {
     );
   }, [scrollPositionY]);
 
+  // scroll to top on refresh
+  useEffect((): (() => void) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    const scrollUpTimer: NodeJS.Timeout | number = setTimeout((): void => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, 50);
+    return (): void => {
+      clearTimeout(scrollUpTimer);
+    };
+  }, []);
+
   // Code for conditional rendering of mobile version
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const checkViewport = (): void => {
     setIsMobile(window.innerWidth < 850);
   };
-  useEffect(() => {
+  useEffect((): (() => void) => {
     checkViewport();
     window.addEventListener("resize", checkViewport);
-    return () => {
+    return (): void => {
       window.removeEventListener("resize", checkViewport);
     };
   }, []);
 
   return !isMobile ? (
-      <Asherah
-        // Const props
-        titleOpacity={titleOpacity}
-        titleMargin={titleMargin}
-        welcomeThreeOpacity={welcomeThreeOpacity}
-        page={page}
-        headerColour={headerColour}
-        dotColour={dotColour}
-        dotFill={dotFill}
-        gallery={gallery}
-        // Ref props
-        copyRef={copyRef}
-        plate2Ref={plate2Ref}
-        treeRef={treeRef}
-        hammonRef={hammonRef}
-        parallaxRef={parallaxRef}
-        appetiserPaneRef={appetiserPaneRef}
-        entreePaneRef={entreePaneRef}
-        dessertPaneRef={dessertPaneRef}
-        drinksPaneRef={drinksPaneRef}
-        // Function props
-        handleClick={handleClick}
-        setAppetiserRef={setAppetiserRef}
-        setMenuTitleRef={setMenuTitleRef}
-        dotNavClick={dotNavClick}
-        // Gallery props (mixed)
-        lightboxOpen={lightboxOpen}
-        closeLightbox={closeLightbox}
-        clickOnImage={clickOnImage}
-        imageIndex={imageIndex}
-      />
+    <Asherah
+      // Const props
+      titleOpacity={titleOpacity}
+      titleMargin={titleMargin}
+      welcomeThreeOpacity={welcomeThreeOpacity}
+      page={page}
+      headerColour={headerColour}
+      dotColour={dotColour}
+      dotFill={dotFill}
+      gallery={gallery}
+      // Ref props
+      copyRef={copyRef}
+      plate2Ref={plate2Ref}
+      treeRef={treeRef}
+      hammonRef={hammonRef}
+      parallaxRef={parallaxRef}
+      appetiserPaneRef={appetiserPaneRef}
+      entreePaneRef={entreePaneRef}
+      dessertPaneRef={dessertPaneRef}
+      drinksPaneRef={drinksPaneRef}
+      // Function props
+      handleClick={handleClick}
+      setAppetiserRef={setAppetiserRef}
+      setMenuTitleRef={setMenuTitleRef}
+      dotNavClick={dotNavClick}
+      // Gallery props (mixed)
+      lightboxOpen={lightboxOpen}
+      closeLightbox={closeLightbox}
+      clickOnImage={clickOnImage}
+      imageIndex={imageIndex}
+    />
   ) : (
     <AsherahMobile />
   );
